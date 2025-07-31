@@ -2,24 +2,33 @@
 import utility.*;
 import warrior.*;
 import weapon.*;
+import armour.*;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Battle {
     // object creation
-    private static Scanner input = new Scanner(System.in);
+    private static Random RandNum = new Random();
     private static Ink ink = new Ink();
+    private static Validator val = new Validator();
     private static Warrior player;
     private static Weapon pWeapon;
+    private static Armour pArmour;
     private static Warrior enemy;
     private static Weapon eWeapon;
+    private static Armour eArmour;
 
     // variables
     private static boolean isPlayerTurn = true;
     private static boolean gameOver = false;
+    private static int warTypes = 3; // the number of warrior types
+    private static int wepTypes = 3; // the number of weapon types
+    private static int armTypes = 3; // the number of armour types
+    private static int attackTypes = 2; // the number of attack types
 
     public static void main(String[] args) {
         ink.welcome();
+        gameSetup();
 
         // ============================================>>
         // === Warrior selection/creation ==>>

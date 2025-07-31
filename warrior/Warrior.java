@@ -6,7 +6,8 @@ public abstract class Warrior {
     private String type;
     private int health; // the amount of health points, hit zero and you are defeated
     private int strength; // the strength you have, used for hit damage bonus
-    private int dexterity; // affects the chance to hit, higher dex = higher hit chance
+    private int dexterity; // skill: affects the chance to hit the opponent, higher dex = higher hit chance
+    // private int hitChance = 65; 65% chance of getting hit
 
     protected Random randNum = new Random();
 
