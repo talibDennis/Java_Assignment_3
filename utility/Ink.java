@@ -16,6 +16,8 @@ public class Ink {
     public static final String CYAN = "\u001B[36m";
     public static final String WHITE = "\u001B[37m";
 
+    public Ink() {} // zero-arg constructor
+
     public void welcome() {
         System.out.println("=================================");
         System.out.println("== Welcome to the Warsim 2025! ==");
@@ -40,6 +42,15 @@ public class Ink {
         System.out.println("===============================\n");
     } // weaponMenu()
 
+    public void armourMenu() {
+        System.out.println("\n===============================");
+        System.out.println("== Select your armour...");
+        System.out.println("== 1) Leather");
+        System.out.println("== 2) Chainmail");
+        System.out.println("== 3) Platemail");
+        System.out.println("===============================\n");
+    } // armourMenu()
+
     public void attackMenu() {
         System.out.println("\n===============================");
         System.out.println("== Choose your attack:");
@@ -49,13 +60,22 @@ public class Ink {
         System.out.println("===============================\n");
     } // attackMenu()
 
-    public void printWarriorStats(Warrior warrior) {
-        System.out.println("\n===============================");
-        System.out.println("== Stats:");
-        System.out.printf("== Health %d%n", warrior.getHealth());
-        System.out.printf("== Strength %d%n", warrior.getStrength());
-        System.out.printf("== Dexterity %d%n", warrior.getDexterity());
-        System.out.println("===============================\n");
+    public void printWarriorStats(Warrior player, Weapon pWeapon, Armour pArmour,
+    Warrior enemy, Weapon eWeapon, Armour eArmour) {
+    System.out.println("\n====================================");
+    System.out.printf("Player(%s) STATS:%n", player.getType()); // seeems to be missing stats variable
+    System.out.printf("== Weapon(%s) Armour(%s)%n", pWeapon.getType(), pArmour.getType());
+    System.out.printf("== Health      %12d%n", player.getHealth());
+    System.out.printf("== Strength    %12d%n", player.getStrength());
+    System.out.printf("== Dexterity   %12d%n", player.getDexterity());
+    System.out.println("====================================");
+    System.out.println("====================================");
+    System.out.printf("Enemy(%s) STATS:%n", enemy.getType()); // seeems to be missing stats variable
+    System.out.printf("== Weapon(%s) Armour(%s)%n", eWeapon.getType(), eArmour.getType());
+    System.out.printf("== Health      %12d%n", enemy.getHealth());
+    System.out.printf("== Strength    %12d%n", enemy.getStrength());
+    System.out.printf("== Dexterity   %12d%n", enemy.getDexterity());
+    System.out.println("====================================\n");
     } // printWarriorStats()
 
 } // class
