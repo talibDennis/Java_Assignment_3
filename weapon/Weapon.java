@@ -2,7 +2,7 @@ package weapon;
 
 import java.util.Random;
 
-public class Weapon {
+public abstract class Weapon {
   private String type;
   private int baseDamage; // the base amount the weapon can do
   private int dexCost; // the cost to the players dexterity
