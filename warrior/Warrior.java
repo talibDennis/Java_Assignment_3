@@ -13,30 +13,30 @@ public abstract class Warrior {
 
     public Warrior(String type) {
         this.type = type;
-    }
+    } // constructor
 
     // getters
     public String getType() {
         return this.type;
     } // getType()
-
     public int getHealth() {
-        return this.health;
+        if(this.health <= 0)
+            return 0;
+        else
+            return this.health;
     } // getHealth()
-
     public int getStrength() {
         return this.strength;
     } // getStrength()
-
     public int getDexterity() {
         return this.dexterity;
     } // getDexterity()
 
     // setters
-    public void setType(String type) {
-        this.type = type;
+    // public void setType(String type) {
+    public String setType() {
+        return this.type;
     } // setType()
-
     public void setHealth(int health) {
         this.health = health;
     } // setHealth()
@@ -44,8 +44,13 @@ public abstract class Warrior {
     public void setStrength(int strength) {
         this.strength = strength;
     } // setStrength()
-
     public void setDexterity(int dexterity) {
         this.dexterity = dexterity;
     } // setDexterity()
+
+    // take damage
+    public void reduceHealth(float damageAmount) {
+        this.health -= damageAmount;
+    }
+    
 } // class
