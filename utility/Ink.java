@@ -128,7 +128,6 @@ public class Ink {
     System.out.println("/// Select your attack: ");
     System.out.println("/// 1) Normal");
     System.out.println("/// 2) Heavy");
-    // System.out.println("/// 3) Ability");
     System.out.println("/////////////////////////////\n");
   } // attackMenu()
   
