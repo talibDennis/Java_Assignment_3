@@ -1,7 +1,7 @@
 package warrior;
 
 public class Human extends Warrior {
-    private int minHealth = 200; // min amount a Orc warrior starts with
+    private int minHealth = 200; // min amount a Human warrior starts with
     private int bonusHealth = 40; // the bonus or extra range for the health stat
     private int minStrength = 80;
     private int bonusStrength = 30;
