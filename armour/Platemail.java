@@ -10,7 +10,7 @@ public class Platemail extends Armour {
     super("Platemail");
     super.setProtectionAmount(protectionAmount);
     super.setDexCost(dexCost);
-  }
+  } // constructor
 
   // setters
   public void setArmourReduction(int damageAmount) {

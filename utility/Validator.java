@@ -15,7 +15,7 @@ public class Validator {
     while (true) {
       System.out.printf("Enter a number between 1 & %d:%n", maxVal);
       try { // wraps code that can break
-        choice = Integer.parseInt(input.nextInt());
+        choice = Integer.parseInt(input.nextLine());
 
         if (choice >= 1 && choice <= maxVal) {
           System.out.println("You entered: " + choice);
@@ -41,7 +41,7 @@ public class Validator {
     while (true) {
       System.out.printf("Enter a number between 1 & %d:$n", maxVal);
       try {
-        choice = Integer.parseInt(input.nextInt());
+        choice = Integer.parseInt(input.nextLine());
 
         if (choice >= 1 && choice <= maxVal) {
           System.out.println("You entered: " + choice);
