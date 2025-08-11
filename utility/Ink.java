@@ -29,14 +29,14 @@ public class Ink {
 
   public void welcome() {
     System.out.println("///////////////////////////////////");
-    System.out.println("///// Welcome to Warsim 2025! /////");
-    System.out.println("///////////////////////////////////\n");
+    System.out.println(BLUE + "///// Welcome to Warsim 2025! /////");
+    System.out.println(WHITE + "///////////////////////////////////\n");
   } // welcome
 
   public void goodbye() {
-    System.out.println("\n///////////////////////////////////");
-    System.out.println("///// Thank you for playing!! /////");
-    System.out.println("///////////////////////////////////\n");
+    System.out.println(YELLOW + "\n*********************************");
+    System.out.println(PURPLE + "///// Thank you for playing!! /////");
+    System.out.println(YELLOW + "***********************************\n");
   } // goodbye
 
   public void printStats(Warrior player, Weapon pWeapon, Armour pArmour,
@@ -85,9 +85,9 @@ public class Ink {
 
   public void attackResult(float damage, Warrior warrior, String who) {
     if(damage > 0) {
-      System.out.printf(GREEN + "%s %s HITS for %.0f points!%n", who, warrior.getType(), damage);
+      System.out.printf(GREEN + "%s %s deals %.0f points of damage!%n", who, warrior.getType(), damage);
       System.out.printf("%.0f health points removed!%n", damage);
-      System.out.printf("%d health points remain!%n" + RESET, warrior.getHealth());
+      System.out.printf("Remaining health points %d!%n" + RESET, warrior.getHealth());
       System.out.println();
     }
     else {
@@ -99,9 +99,9 @@ public class Ink {
   public void warriorMenu() {
     System.out.println("/////////////////////////////");
     System.out.println("/// Select your warrior: ");
-    System.out.println("/// 1) Human");
+    System.out.println("/// 1) Orc");
     System.out.println("/// 2) Elf");
-    System.out.println("/// 3) Orc");
+    System.out.println("/// 3) Human");
     System.out.println("/////////////////////////////\n");
   } // warriorMenu()
 
