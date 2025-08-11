@@ -15,7 +15,7 @@ public class Elf extends Warrior {
         super.setHealth(super.randNum.nextInt(this.healthRange) + this.minHealth);
         super.setStrength(super.randNum.nextInt(this.strengthRange) + this.minStrength);
         super.setDexterity(super.randNum.nextInt(this.dexterityRange) + this.minDexterity);
-    }
+    } // contructor
 
     // getters
 

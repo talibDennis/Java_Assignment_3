@@ -14,7 +14,7 @@ public class Orc extends Warrior {
         super.setHealth(super.randNum.nextInt(this.bonusHealth) + this.minHealth);
         super.setStrength(super.randNum.nextInt(this.bonusStrength) + this.minStrength);
         super.setDexterity(super.randNum.nextInt(this.bonusDexterity) + this.minDexterity);
-    }
+    } // contructor
 
     // getters
 
