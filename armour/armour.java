@@ -2,7 +2,7 @@ package armour;
 
 public abstract class Armour {
   private String type;
-  private int armourAmount;
+  private int protectionAmount;
   private int dexCost;
 
   public Armour(String type) {
@@ -13,8 +13,8 @@ public abstract class Armour {
   public String getType() {
     return this.type;
   }
-  public int getArmourAmount() {
-    return this.armourAmount;
+  public int getProtectionAmount() {
+    return this.protectionAmount;
   }
   public int getDexCost() {
     return this.dexCost;
@@ -24,12 +24,12 @@ public abstract class Armour {
   public void setType(String type) {
     this.type = type;
   }
-  public void setArmourAmount(int armourAmount) {
-    this.armourAmount = armourAmount;
+  public void setProtectionAmount(int protectionAmount) {
+    this.protectionAmount = protectionAmount;
   }
   public void setDexCost(int dexCost) {
     this.dexCost = dexCost;
   }
-  public abstract void setArmourReduction(int damageAmount);
+  // public abstract void setArmourReduction(int damageAmount);
 
 } // class
